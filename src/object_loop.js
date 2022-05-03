@@ -16,3 +16,13 @@ var memberObject = {
   developer: "graphittie",
   designer: "leezhce",
 };
+
+// 반복문으로 객체의 모든 원소에 접근
+
+console.group("object loop");
+
+// name = memberObject에 정의된 속성이름을 하나씩 가져옴
+for (var name in memberObject) {
+  console.log(name, memberObject[name]);
+}
+console.groupEnd("object loop");
