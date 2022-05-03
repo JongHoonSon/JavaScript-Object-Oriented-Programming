@@ -10,13 +10,15 @@ Person.prototype.sum = function () {
 };
 
 function PersonPlus(name, first, second, third, fourth) {
-  Person.call(this, name, first, second);
+  Person.call(this, name, first, second, third);
   this.fourth = fourth;
 }
 
 PersonPlus.prototype.avg = function () {
-  retrun(this.first + this.second + this.third + this.fourth) / 4;
+  return (this.first + this.second + this.third + this.fourth) / 4;
 };
+
+PersonPlus.prototype.__proto__ = Person.prototype;
 
 var lee = new PersonPlus("lee", 10, 20, 30, 40);
 console.log("lee.sum()", lee.sum());
