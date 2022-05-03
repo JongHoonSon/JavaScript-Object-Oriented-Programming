@@ -9,3 +9,13 @@ console.log("subObj.superVal =>", subObj.superVal);
 
 subObj.subVal = "sub";
 console.log("superObj.superVal =>", superObj.superVal);
+
+var kim = {
+  name: "kim",
+  first: 10,
+  second: 20,
+  sum: function () {
+    return this.first + this.second;
+  },
+};
+console.log("kim.sum()", kim.sum());
