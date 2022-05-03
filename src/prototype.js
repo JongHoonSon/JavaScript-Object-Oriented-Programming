@@ -1,3 +1,4 @@
+// 현재는 객체가 생성될 때 마다 sum이라는 메소드도 함께 생성됨 (자원 낭비)
 function Person(name, first, second, third) {
   this.name = name;
   this.first = first;
