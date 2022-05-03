@@ -4,19 +4,15 @@ function Person(name, first, second, third) {
   this.first = first;
   this.second = second;
   this.third = third;
-  this.sum = function () {
-    return this.first + this.second + this.third;
-  };
 }
+
+// Person으로 생성된 객체는 모두 sum 함수를 사용할 수 있도록함
+Person.prototype.sum = function () {
+  return this.first + this.second + this.third;
+};
 
 // 객체의 메소드를 바꾸려면, 생성된 모든 객체에 직접 접근해야됨
 var lee = new Person("lee", 10, 20, 30);
-lee.sum = function () {
-  return "modified : " + (this.first + this.second);
-};
 var park = new Person("park", 10, 10, 10);
-park.sum = function () {
-  return "modified : " + (this.first + this.second);
-};
 console.log("lee.sum()", lee.sum());
 console.log("park.sum()", park.sum());
