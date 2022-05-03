@@ -7,7 +7,7 @@ class Person {
     console.log("constructor");
   }
   sum() {
-    return "prototype : " + (this.first + this.second + this.third);
+    return this.first + this.second + this.third;
   }
 }
 
@@ -20,10 +20,10 @@ class PersonPlus extends Person {
     return super.sum() + this.fourth;
   }
   avg() {
-    return (this.first + this.second) / 2;
+    return (this.first + this.second + this.third + this.fourth) / 4;
   }
 }
 
-var lee = new PersonPlus("lee", 10, 20, 30);
+var lee = new PersonPlus("lee", 10, 20, 30, 40);
 console.log("lee.sum()", lee.sum());
 console.log("lee.avg()", lee.avg());
