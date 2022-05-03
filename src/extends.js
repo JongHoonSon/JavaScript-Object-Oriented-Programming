@@ -12,6 +12,13 @@ class Person {
 }
 
 class PersonPlus extends Person {
+  constructor(name, first, second, third, fourth) {
+    super(name, first, second, third);
+    this.fourth = fourth;
+  }
+  sum() {
+    return super.sum() + this.fourth;
+  }
   avg() {
     return (this.first + this.second) / 2;
   }
