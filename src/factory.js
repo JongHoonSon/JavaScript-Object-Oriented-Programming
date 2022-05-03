@@ -1,22 +1,6 @@
-var lee = {
-  name: "lee",
-  first: 10,
-  second: 20,
-  third: 30,
-  sum: function () {
-    return this.first + this.second + this.third;
-  },
-};
-
-var park = {
-  name: "park",
-  first: 10,
-  second: 10,
-  third: 10,
-  sum: function () {
-    return this.first + this.second + this.third;
-  },
-};
+// 생성자를 이용해서 객체 생성
+var lee = new Person("lee", 10, 20, 30);
+var park = new Person("park", 10, 10, 10);
 console.log("lee.sum()", lee.sum());
 console.log("park.sum()", park.sum());
 
@@ -26,10 +10,11 @@ console.log("d1.getFullYear()", d1.getFullYear());
 console.log("d1.getMonth()", d1.getMonth());
 
 // JS에서 생성자는 함수로 선언하고 new를 붙혀 사용함
-function Person() {
-  (this.name = "son"), (this.first = 10);
-  this.second = 20;
-  this.third = 30;
+function Person(name, first, second, third) {
+  this.name = name;
+  this.first = first;
+  this.second = second;
+  this.third = third;
   this.sum = function () {
     return this.first + this.second + this.third;
   };
