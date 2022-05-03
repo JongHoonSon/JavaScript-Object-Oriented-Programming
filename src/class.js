@@ -8,12 +8,10 @@ class Person {
     this.third = third;
     console.log("constructor");
   }
+  sum() {
+    return "prototype : " + (this.first + this.second + this.third);
+  }
 }
-
-// Person 클래스에 sum 프로토타입 적용
-Person.prototype.sum = function () {
-  return "prototype : " + (this.first + this.second + this.third);
-};
 
 var lee = new Person("lee", 10, 20, 30);
 console.log("lee", lee);
