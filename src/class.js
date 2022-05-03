@@ -1,4 +1,9 @@
-class Person {}
+class Person {
+  // Person 타입의 새로운 객체가 생성될 때, cunstructor가 실행됨
+  constructor() {
+    console.log("constructor");
+  }
+}
 
 var lee = new Person();
 console.log("lee", lee);
