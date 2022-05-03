@@ -21,3 +21,4 @@ PersonPlus.prototype.avg = function () {
 var lee = new PersonPlus("lee", 10, 20, 30, 40);
 console.log("lee.sum()", lee.sum());
 console.log("lee.avg()", lee.avg());
+//
