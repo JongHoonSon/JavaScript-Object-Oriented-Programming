@@ -23,6 +23,7 @@ console.log("MyMath.random()", MyMath.random());
 console.log("MyMath.floor(3.9)", MyMath.floor(3.9));
 
 // 객체를 사용하지 않고 같은 기능을 하는 변수, 함수를 만드려면?
+// => 정리정돈이 되지 않아 나중에 다시 쓸 때 불편함
 var MyMath_PI = Math.PI;
 function MyMath_random() {
   return Math.random();
