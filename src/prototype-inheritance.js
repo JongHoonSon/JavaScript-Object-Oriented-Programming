@@ -18,4 +18,11 @@ var kim = {
     return this.first + this.second;
   },
 };
+var lee = {
+  name: "lee",
+  first: 10,
+  second: 10,
+};
+lee.__proto__ = kim;
 console.log("kim.sum()", kim.sum());
+console.log("lee.sum()", lee.sum());
