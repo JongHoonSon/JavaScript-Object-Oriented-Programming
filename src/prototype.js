@@ -9,7 +9,14 @@ function Person(name, first, second, third) {
   };
 }
 
+// 객체의 메소드를 바꾸려면, 생성된 모든 객체에 직접 접근해야됨
 var lee = new Person("lee", 10, 20, 30);
+lee.sum = function () {
+  return "modified : " + (this.first + this.second);
+};
 var park = new Person("park", 10, 10, 10);
+park.sum = function () {
+  return "modified : " + (this.first + this.second);
+};
 console.log("lee.sum()", lee.sum());
 console.log("park.sum()", park.sum());
