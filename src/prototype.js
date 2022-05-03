@@ -8,7 +8,8 @@ function Person(name, first, second, third) {
 
 // Person으로 생성된 객체는 모두 sum 함수를 사용할 수 있도록함
 Person.prototype.sum = function () {
-  return this.first + this.second + this.third;
+  // prototype의 값을 변경하면 모든 객체에 적용됨
+  return "prototype : " + (this.first + this.second + this.third);
 };
 
 // 객체의 메소드를 바꾸려면, 생성된 모든 객체에 직접 접근해야됨
