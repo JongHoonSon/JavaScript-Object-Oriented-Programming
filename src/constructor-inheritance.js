@@ -14,13 +14,17 @@ function PersonPlus(name, first, second, third, fourth) {
   this.fourth = fourth;
 }
 
+PersonPlus.prototype = Object.create(Person.prototype);
+PersonPlus.prototype.constructor = PersonPlus;
+
 PersonPlus.prototype.avg = function () {
   return (this.first + this.second + this.third + this.fourth) / 4;
 };
 
-PersonPlus.prototype.__proto__ = Person.prototype;
+// PersonPlus.prototype.__proto__ = Person.prototype;
 
 var lee = new PersonPlus("lee", 10, 20, 30, 40);
 console.log("lee.sum()", lee.sum());
 console.log("lee.avg()", lee.avg());
+console.log("lee.constructor", lee.constructor);
 //
